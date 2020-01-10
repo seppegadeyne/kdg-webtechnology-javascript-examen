@@ -81,9 +81,7 @@ function createObjectsAndShowData() { /*3.2*/
     let photos = [];
     for (let i = 0; i < numbers.length; i++) {
         photos[i] = new Photo(numbers[i], data[i][0], data[i][1], data[i][2]);
-    }
-    for (let photo of photos) {
-        document.querySelector("#check").innerHTML += photo.toText() + "<br>";
+        document.querySelector("#check").innerHTML += photos[i].toText() + "<br>";
     }
 }
 
