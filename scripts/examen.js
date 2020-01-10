@@ -46,8 +46,7 @@ function getParam(name) { /*2.1*/
 }
 
 function showName(nickname) { /*2.2*/
-    let tekst = `Portfolio van ${getParam("username")}`;
-    document.querySelector("header:nth-of-type(1)").innerHTML = tekst;
+    document.querySelector("header:nth-of-type(1)").innerHTML = `Portfolio van ${getParam("username")}`;
 }
 
 function showPicsHorizontal() { /*2.3*/
