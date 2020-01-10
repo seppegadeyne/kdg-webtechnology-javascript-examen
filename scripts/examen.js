@@ -92,42 +92,29 @@ function createTable() { /*3.3*/
     let tblBody = document.createElement("tbody");
     let titles = ["nr", "iso", "shutter", "diaphragm"];
 
-    // creating all title cells
-    for (let i = 0; i < 1; i++) {
-        // creates a table row
-        let row = document.createElement("tr");
-
-        for (let j = 0; j < titles.length; j++) {
-            let cell = document.createElement("td");
-            let cellText = document.createTextNode(titles[j]);
-            cell.appendChild(cellText);
-            row.appendChild(cell);
-        }
-
-        tblBody.appendChild(row);
-        row.style.textTransform = "uppercase";
-        row.style.fontWeight = "bold";
-    }
-
     // creating all data cells
-    for (let i = 0; i < data.length; i++) {
+    for (let i = -1; i < data.length; i++) {
         // creates a table row
         let row = document.createElement("tr");
-
         for (let j = 0; j < 4; j++) {
             let cell = document.createElement("td");
             let inhoud;
-            if(j === 0) {
+            if (i == -1) {
+                inhoud = titles[j];
+            } else if (i >= 0 && j === 0) {
                 inhoud = numbers[i];
-            } else {
+            } else if (i >= 0) {
                 inhoud = data[i][j-1];
             }
             let cellText = document.createTextNode(inhoud);
             cell.appendChild(cellText);
             row.appendChild(cell);
         }
-
         tblBody.appendChild(row);
+        if (i == -1) {
+            row.style.textTransform = "uppercase";
+            row.style.fontWeight = "bold";
+        }
     }
 
     tbl.appendChild(tblBody);
