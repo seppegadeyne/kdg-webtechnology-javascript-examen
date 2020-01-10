@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Startformulier</title>
+  <link href="css/style.css" rel=stylesheet>
+  <script src="scripts/examen_init_niet_wijzigen.js"></script>
+  <script id="script" src="scripts/examen.js"></script>
+</head>
+<body>
+<header>
+  Portfolio
+</header>
+<main>
+  <form action="portfolio.html" method="get">
+    <ul>
+      <li><label for="user">Username:&nbsp;</label>
+        <input type="hidden" id="hidden" name="hidden" value="hidden field with extra info">
+        <input type="text" id="user" name="username">
+        <input type="button" id="test" value="test username">
+      </li>
+      <li><input type="submit" id="verzend" value="ENTER PORTFOLIO" name="submit">
+        <span class="portfout"></span>
+      </li>
+    </ul>
+  </form>
+</main>
+<script>
+    index_loaded();
+</script>
+</body>
+</html>

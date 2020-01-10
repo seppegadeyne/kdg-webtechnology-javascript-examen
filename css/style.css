@@ -1,0 +1,40 @@
+body, header {
+    font-size: 1.2em;
+    font-family: verdana helvetica arial sans-serif;
+}
+
+header {
+    font-size : 2em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+label, input {
+    margin-bottom: 10px;
+}
+
+input {
+    background-color: bisque;
+}
+
+figure  {
+    margin: 4px;
+    display: block;
+}
+
+figcaption {
+    display: inline;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+td, th {
+    padding: 10px;
+    text-align: right;
+    border: 1px solid black;
+}
